@@ -1,4 +1,44 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="about:blank">
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    {{#refresh}}
+    <meta http-equiv="refresh" content="10">
+    {{/refresh}}
+    <title>Monero Transaction {{tx_hash}} — XMRScan</title>
+    <meta name="description" content="Monero (XMR) transaction {{tx_hash}} - XMRScan">
+    <meta property="og:title" content="Monero (XMR) transaction {{tx_hash}}">
+    <meta name="og:title" content="Monero Transaction {{tx_hash}} | XMRScan">
+    <meta name="og:description" content="Monero (XMR) transaction {{tx_hash}} - XMRScan">
+    <meta property="og:url" content="https://xmrscan.org/transaction/{{tx_hash}}">
+    <meta property="og:type" content="website" />
+    <meta name="twitter:description" content="Monero (XMR) transaction {{tx_hash}} - XMRScan">
+    <meta name="twitter:title" content="Monero Transaction {{tx_hash}} | XMRScan">
+    <!--<link rel="stylesheet" type="text/css" href="/css/style.css">-->
+    <style type="text/css">
+        {{#css_styles}}{{/css_styles}}
+    </style>
 
+</head>
+<body>
+<div>
+
+    <div class="center">
+        <h1 class="center"><a href="/">Monero Transaction {{tx_hash}}</a></h1>
+        <h4>Transaction {{tx_hash}} was carried out on the Monero network on {{blk_timestamp}}.  The transaction has {{confirmations}} confirmations. Transaction fee was {{tx_fee}} XMR.</h4>
+        <h4 style="font-size: 15px; margin: 0px">(no javascript - no cookies - no web analytics trackers - no images - open sourced)</h4>
+    </div>
+
+
+    <div class="center">
+        <form action="/search" method="get" style="width:100%; margin-top:15px" class="style-1">
+            <input type="text" name="value" size="120"
+                   placeholder="block height, block hash, transaction hash">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+</div>
 <div class="center">
      <h3 style="font-size: 12px; margin-top: 20px">
      {{#refresh}}

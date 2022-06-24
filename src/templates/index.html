@@ -1,4 +1,44 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="about:blank">
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    {{#refresh}}
+    <meta http-equiv="refresh" content="10">
+    {{/refresh}}
+    <title>Monero (XMR) Blockchain Explorer - XMRScan</title>
+    <meta name="description" content="XMRScan allows you to check XMR blocks and transactions with Monero blockchain explorer">
+    <meta property="og:title" content="Monero (XMR) Explorer - XMRScan">
+    <meta name="og:title" content="Monero (XMR) Explorer - XMRScan">
+    <meta name="og:description" content="XMRScan allows you to check XMR blocks and transactions with Monero blockchain explorer">
+    <meta property="og:url" content="https://xmrscan.org">
+    <meta property="og:type" content="website" />
+    <meta name="twitter:description" content="XMRScan allows you to check XMR blocks and transactions with Monero blockchain explorer">
+    <meta name="twitter:title" content="Monero (XMR) Explorer - XMRScan">
+    <!--<link rel="stylesheet" type="text/css" href="/css/style.css">-->
+    <style type="text/css">
+        {{#css_styles}}{{/css_styles}}
+    </style>
+</head>
+<body>
+<div>
 
+    <div class="center">
+        <h1 class="center"><a href="/">Monero (XMR) Block Explorer</a></h1>
+        <h4>Welcome to XMRScan, a completely free Monero block explorer.</h4>
+        <h4>Enter your transaction ID, or TXID in the search bar to locate your transaction in Monero blockchain.</h4>
+        <h4 style="font-size: 15px; margin: 0px">(no javascript - no cookies - no web analytics trackers - no images - open sourced)</h4>
+    </div>
+
+
+    <div class="center">
+        <form action="/search" method="get" style="width:100%; margin-top:15px" class="style-1">
+            <input type="text" name="value" size="120"
+                   placeholder="block height, block hash, transaction hash">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+</div>
 <div class="center">
      <h3 style="font-size: 12px; margin-top: 20px">
 
