@@ -8,6 +8,7 @@ import { NodeState } from 'redux/nodes/reducer';
 import { Node } from 'redux/nodes/actions';
 import { RouteProps } from 'react-router';
 import { PageCount } from 'components/tables/page-count';
+import MetaTags from 'react-meta-tags';
 
 interface OwnProps {
   paginated?: boolean;
@@ -93,8 +94,28 @@ class MemPoolClass extends React.Component<Props, State> {
 
     return (
       <div className={`MemPool card ${paginated && 'paginated'}`}>
+        <MetaTags>
+          <title>Monero (XMR) Transaction Pool — XMRScan</title>
+          <meta
+            name="description"
+            content="Monero (XMR) Transaction Pool. Monero Block Frequency Tool - XMRScan"
+          />
+          <meta property="og:title" content="Monero (XMR) Transaction Pool — XMRScan" />
+          <meta name="og:title" content="Monero (XMR) Transaction Pool — XMRScan" />
+          <meta
+            name="og:description"
+            content="Monero (XMR) Transaction Pool. Monero Block Frequency Tool - XMRScan"
+          />
+          <meta property="og:url" content="https://xmrscan.org/txpool" />
+          <meta property="og:type" content="website" />
+          <meta
+            name="twitter:description"
+            content="Monero (XMR) Transaction Pool. Monero Block Frequency Tool - XMRScan"
+          />
+          <meta name="twitter:title" content="Monero (XMR) Transaction Pool — XMRScan" />
+        </MetaTags>
         <div className="MemPool-header">
-          <h2 className="MemPool-title">MemPool</h2>{' '}
+          <h1 className="MemPool-title">Monero Transaction Pool</h1>{' '}
           {!paginated &&
             txs.length >= 5 && (
               <span className="MemPool-size">

@@ -8,6 +8,7 @@ import { RouteComponentProps } from 'react-router';
 import { Node } from 'redux/nodes/actions';
 import { Link } from 'react-router-dom';
 import { DetailsSkeleton } from './skeleton-details';
+import MetaTags from 'react-meta-tags';
 
 type Props = NodeState & RouteComponentProps<{ block: string }>;
 
@@ -49,12 +50,46 @@ export class BlockDetailsClass extends React.Component<Props, State> {
 
   public render() {
     const block = this.state.data.block as any;
+
     return (
       <div className="Details card">
         {!!block ? (
           <>
+            <MetaTags>
+              <title>Monero Block {block.block_height} — XMRScan</title>
+              <meta
+                name="description"
+                content={`Monero (XMR) block ${block.block_height}, hash: ${block.hash}`}
+              />
+              <meta property="og:title" content={`Monero (XMR) block ${block.block_height}`} />
+              <meta
+                name="og:title"
+                content={`Monero (XMR) block ${block.block_height} | XMRScan`}
+              />
+              <meta
+                name="og:description"
+                content={`Monero (XMR) block ${block.block_height}, hash: ${block.hash}`}
+              />
+              <meta property="og:url" content={`https://xmrscan.org/block/${block.block_height}`} />
+              <meta property="og:type" content="website" />
+              <meta
+                name="twitter:description"
+                content={`Monero (XMR) block ${block.block_height}, hash: ${block.hash}`}
+              />
+              <meta
+                name="twitter:title"
+                content={`Monero (XMR) block ${block.block_height} | XMRScan`}
+              />
+            </MetaTags>
             <div className="Details-header">
-              <h1 className="Details-header-title">Block Details</h1>
+              <div className="Details-header-title-wrapper">
+                <h1 className="Details-header-title">Monero (XMR) Block Explorer</h1>
+                <p>
+                  Welcome to XMRScan, a completely free Monero block explorer. Enter your
+                  transaction ID, or TXID in the search bar to locate your transaction in Monero
+                  blockchain.
+                </p>
+              </div>
               <div className="flex-spacer" />
               <p className="Details-header-timestamp">
                 {formatApiDateStrings(block.timestamp_utc)}
@@ -118,6 +153,13 @@ export class BlockDetailsClass extends React.Component<Props, State> {
                     })}
                   </tbody>
                 </table>
+              </div>
+              <div className="Details-body-section">
+                <p>
+                  Block was created on {formatApiDateStrings(block.timestamp_utc)}. It contains{' '}
+                  {block.txs.length} transactions. Block size of the block {block.block_height} is{' '}
+                  {toKB(block.size)}.
+                </p>
               </div>
             </div>
           </>

@@ -42,23 +42,7 @@ const config = merge(common, {
     new FaviconsWebpackPlugin(path.join(__dirname, '../src/assets/imgs/favicon.png')),
     new CopyWebpackPlugin([
       {
-        from: path.join(__dirname, '../src/assets/imgs/og-01.png'),
-        to: path.join(__dirname, '../dist')
-      },
-      {
-        from: path.join(__dirname, '../src/assets/imgs/og-02.png'),
-        to: path.join(__dirname, '../dist')
-      },
-      {
-        from: path.join(__dirname, '../src/assets/imgs/og-03.png'),
-        to: path.join(__dirname, '../dist')
-      },
-      {
-        from: path.join(__dirname, '../src/assets/imgs/og-04.png'),
-        to: path.join(__dirname, '../dist')
-      },
-      {
-        from: path.join(__dirname, '../src/assets/imgs/favicon/safari-pinned-tab.svg'),
+        from: path.join(__dirname, '../src/assets/imgs/og.png'),
         to: path.join(__dirname, '../dist')
       }
     ])

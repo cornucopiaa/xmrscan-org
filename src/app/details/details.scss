@@ -23,6 +23,7 @@
       font-size: 1.25rem;
       font-weight: 500;
       color: $text-color;
+      word-break: break-all;
     }
     &-timestamp {
       margin-left: 1rem;
@@ -30,6 +31,7 @@
       font-size: 1rem;
       font-weight: 400;
       color: $blue-gray;
+      min-width: 120px;
     }
 
     @media screen and (max-width: 700px) {

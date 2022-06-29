@@ -8,7 +8,9 @@ interface Props {
 export const DetailsSkeleton = ({ type }: Props) => (
   <>
     <div className="Details-header">
-      <h1 className="Details-header-title">Transaction Details</h1>
+      <h1 className="Details-header-title">
+        {type === 'tx' ? 'Monero Transaction' : 'Monero (XMR) Block Explorer'}
+      </h1>
       <div className="flex-spacer" />
       <div className="Details-header-timestamp skeleton">2018 / 04 / 19 – 08:04 UTC</div>
     </div>
