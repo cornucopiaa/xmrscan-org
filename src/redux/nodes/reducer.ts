@@ -3,6 +3,7 @@ import { TypeKeys } from './constants';
 import { Node, AddNodeAction, RemoveNodeAction, EditNodeAction, SelectNodeAction } from './actions';
 
 export const defaultNode = 'MyCryptoAPI';
+export const xmrScanNode = 'XMRScanAPI';
 
 export interface NodeState {
   selectedNode: string;
@@ -11,7 +12,10 @@ export interface NodeState {
 
 export const INITIAL_STATE: NodeState = {
   selectedNode: defaultNode,
-  nodes: [{ name: defaultNode, url: 'https://monero.mycryptoapi.com' }]
+  nodes: [
+    { name: defaultNode, url: 'https://monero.mycryptoapi.com' },
+    { name: xmrScanNode, url: 'https://mainnet.xmrscan.org' }
+  ]
 };
 
 function addNode(state: NodeState, action: AddNodeAction): NodeState {

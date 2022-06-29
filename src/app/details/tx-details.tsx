@@ -10,6 +10,7 @@ import { minutesUntilMined } from 'utils/heuristic';
 import { Link } from 'react-router-dom';
 import { DetailsSkeleton } from './skeleton-details';
 import { Tag } from 'components/tag';
+import MetaTags from 'react-meta-tags';
 
 type Props = NodeState & RouteComponentProps<{ transaction: string }>;
 
@@ -78,8 +79,37 @@ export class TxDetailsClass extends React.Component<Props, State> {
       <div className="Details card">
         {!!transaction ? (
           <>
+            <MetaTags>
+              <title>Monero Transaction {transaction.tx_hash} — XMRScan</title>
+              <meta
+                name="description"
+                content={`Monero (XMR) transaction ${transaction.tx_hash} - XMRScan`}
+              />
+              <meta
+                property="og:title"
+                content={`Monero (XMR) transaction ${transaction.tx_hash}`}
+              />
+              <meta
+                name="og:title"
+                content={`Monero Transaction ${transaction.tx_hash} | XMRScan`}
+              />
+              <meta
+                name="og:description"
+                content={`Monero (XMR) transaction ${transaction.tx_hash} - XMRScan`}
+              />
+              <meta property="og:url" content={`https://xmrscan.org/tx/${transaction.tx_hash}`} />
+              <meta property="og:type" content="website" />
+              <meta
+                name="twitter:description"
+                content={`Monero (XMR) transaction ${transaction.tx_hash} - XMRScan`}
+              />
+              <meta
+                name="twitter:title"
+                content={`Monero Transaction ${transaction.tx_hash} | XMRScan`}
+              />
+            </MetaTags>
             <div className="Details-header">
-              <h1 className="Details-header-title">Transaction Details</h1>
+              <h1 className="Details-header-title">Monero Transaction {transaction.tx_hash}</h1>
               <div className="flex-spacer" />
 
               {!transaction.block_height ? (
@@ -208,6 +238,14 @@ export class TxDetailsClass extends React.Component<Props, State> {
                     })}
                   </tbody>
                 </table>
+              </div>
+              <div className="Details-body-section">
+                <p>
+                  Transaction ${transaction.tx_hash} was carried out on the Monero network on{' '}
+                  {formatApiDateStrings(transaction.timestamp_utc)}. The transaction has{' '}
+                  {transaction.confirmations ? transaction.confirmations : 0} confirmations.
+                  Transaction fee was fee {toKB(transaction.tx_size)}.
+                </p>
               </div>
             </div>
           </>

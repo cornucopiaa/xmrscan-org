@@ -5,7 +5,6 @@
   background-color: $Navigation-bg;
   width: 100%;
   padding: 0.75rem 2rem;
-  margin-top: 0.8rem;
   @media screen and (max-width: 800px) {
     padding: 0.75rem 1rem;
     margin-top: 0;
@@ -86,7 +85,6 @@
     height: 2rem;
     > img {
       margin: -1rem 0;
-      height: 6rem;
     }
   }
 

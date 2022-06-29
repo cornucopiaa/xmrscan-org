@@ -8,6 +8,7 @@ import { NodeState } from 'redux/nodes/reducer';
 import { Node } from 'redux/nodes/actions';
 import { RouteComponentProps } from 'react-router';
 import { PageCount } from 'components/tables/page-count';
+import MetaTags from 'react-meta-tags';
 
 // URLSearchParams API Polyfill: https://github.com/WebReflection/url-search-params
 if ('searchParams' in HTMLAnchorElement.prototype) {
@@ -134,8 +135,28 @@ class BlocksClass extends React.Component<Props, State> {
 
     return (
       <div className="Blocks card">
+        <MetaTags>
+          <title>Monero (XMR) Blocks - XMRScan</title>
+          <meta
+            name="description"
+            content="Monero (XMR) Latest Blocks. Check Monero Blockchain Blocks - XMRScan"
+          />
+          <meta property="og:title" content="Monero (XMR) Blocks - XMRScan" />
+          <meta name="og:title" content="Monero (XMR) Blocks - XMRScan" />
+          <meta
+            name="og:description"
+            content="Monero (XMR) Latest Blocks. Check Monero Blockchain Blocks - XMRScan"
+          />
+          <meta property="og:url" content="https://xmrscan.org/#/blocks" />
+          <meta property="og:type" content="website" />
+          <meta
+            name="twitter:description"
+            content="Monero (XMR) Latest Blocks. Check Monero Blockchain Blocks - XMRScan"
+          />
+          <meta name="twitter:title" content="Monero (XMR) Blocks - XMRScan" />
+        </MetaTags>
         <div className="Blocks-header">
-          <h2 className="Blocks-title">Blocks</h2>
+          <h1 className="Blocks-title">Monero Blocks</h1>
           <div className="flex-spacer" />
           {!!paginated && (
             <>
