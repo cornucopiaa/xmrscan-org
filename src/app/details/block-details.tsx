@@ -70,7 +70,10 @@ export class BlockDetailsClass extends React.Component<Props, State> {
                 name="og:description"
                 content={`Monero (XMR) block ${block.block_height}, hash: ${block.hash}`}
               />
-              <meta property="og:url" content={`https://xmrscan.org/block/${block.block_height}`} />
+              <meta
+                property="og:url"
+                content={`https://xmrscan.org/#/block/${block.block_height}`}
+              />
               <meta property="og:type" content="website" />
               <meta
                 name="twitter:description"
@@ -80,15 +83,14 @@ export class BlockDetailsClass extends React.Component<Props, State> {
                 name="twitter:title"
                 content={`Monero (XMR) block ${block.block_height} | XMRScan`}
               />
+              <meta name="application-name" content="XMRScan" />
+              <meta name="apple-mobile-web-app-title" content="XMRScan" />
             </MetaTags>
             <div className="Details-header">
               <div className="Details-header-title-wrapper">
-                <h1 className="Details-header-title">Monero (XMR) Block Explorer</h1>
-                <p>
-                  Welcome to XMRScan, a completely free Monero block explorer. Enter your
-                  transaction ID, or TXID in the search bar to locate your transaction in Monero
-                  blockchain.
-                </p>
+                <h1 className="Details-header-title">
+                  Monero (XMR) Block Explorer {block.block_height}
+                </h1>
               </div>
               <div className="flex-spacer" />
               <p className="Details-header-timestamp">
@@ -157,8 +159,8 @@ export class BlockDetailsClass extends React.Component<Props, State> {
               <div className="Details-body-section">
                 <p>
                   Block was created on {formatApiDateStrings(block.timestamp_utc)}. It contains{' '}
-                  {block.txs.length} transactions. Block size of the block {block.block_height} is{' '}
-                  {toKB(block.size)}.
+                  {block.txs.length} {block.txs.length === 1 ? 'transaction' : 'transactions'}.
+                  Block {block.block_height} size is {toKB(block.size)}.
                 </p>
               </div>
             </div>

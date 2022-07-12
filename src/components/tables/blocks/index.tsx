@@ -154,6 +154,8 @@ class BlocksClass extends React.Component<Props, State> {
             content="Monero (XMR) Latest Blocks. Check Monero Blockchain Blocks - XMRScan"
           />
           <meta name="twitter:title" content="Monero (XMR) Blocks - XMRScan" />
+          <meta name="application-name" content="XMRScan" />
+          <meta name="apple-mobile-web-app-title" content="XMRScan" />
         </MetaTags>
         <div className="Blocks-header">
           <h1 className="Blocks-title">Monero Blocks</h1>

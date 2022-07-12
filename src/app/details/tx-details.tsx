@@ -97,7 +97,7 @@ export class TxDetailsClass extends React.Component<Props, State> {
                 name="og:description"
                 content={`Monero (XMR) transaction ${transaction.tx_hash} - XMRScan`}
               />
-              <meta property="og:url" content={`https://xmrscan.org/tx/${transaction.tx_hash}`} />
+              <meta property="og:url" content={`https://xmrscan.org/#/tx/${transaction.tx_hash}`} />
               <meta property="og:type" content="website" />
               <meta
                 name="twitter:description"
@@ -107,6 +107,8 @@ export class TxDetailsClass extends React.Component<Props, State> {
                 name="twitter:title"
                 content={`Monero Transaction ${transaction.tx_hash} | XMRScan`}
               />
+              <meta name="application-name" content="XMRScan" />
+              <meta name="apple-mobile-web-app-title" content="XMRScan" />
             </MetaTags>
             <div className="Details-header">
               <h1 className="Details-header-title">Monero Transaction {transaction.tx_hash}</h1>
@@ -241,10 +243,11 @@ export class TxDetailsClass extends React.Component<Props, State> {
               </div>
               <div className="Details-body-section">
                 <p>
-                  Transaction ${transaction.tx_hash} was carried out on the Monero network on{' '}
+                  Transaction {transaction.tx_hash} was carried out on the Monero network on{' '}
                   {formatApiDateStrings(transaction.timestamp_utc)}. The transaction has{' '}
-                  {transaction.confirmations ? transaction.confirmations : 0} confirmations.
-                  Transaction fee was fee {toKB(transaction.tx_size)}.
+                  {transaction.confirmations ? transaction.confirmations : 0}{' '}
+                  {transaction.confirmations === 1 ? 'confirmation' : 'confirmations'}. Transaction
+                  fee was {(transaction.tx_fee / 1000000000000).toFixed(3)} / kB.
                 </p>
               </div>
             </div>
