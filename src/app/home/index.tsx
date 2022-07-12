@@ -95,27 +95,6 @@ export class Home extends React.Component {
 
     return (
       <>
-        <MetaTags>
-          <title>Monero (XMR) Blockchain Explorer - XMRScan</title>
-          <meta
-            name="description"
-            content="XMRScan allows you to check XMR blocks and transactions with Monero blockchain explorer"
-          />
-          <meta property="og:title" content="Monero (XMR) Explorer - XMRScan" />
-          <meta name="og:title" content="Monero (XMR) Explorer - XMRScan" />
-          <meta
-            name="og:description"
-            content="XMRScan allows you to check XMR blocks and transactions with Monero blockchain explorer"
-          />
-          <meta property="og:url" content="https://xmrscan.org" />
-          <meta property="og:type" content="website" />
-          <meta
-            name="twitter:description"
-            content="XMRScan allows you to check XMR blocks and transactions with Monero blockchain explorer"
-          />
-          <meta name="twitter:title" content="Monero (XMR) Explorer - XMRScan" />
-          <script type="application/ld+json">{structuredJSON}</script>
-        </MetaTags>
         <section className="card New-User-CTA">
           <div className="New-User-CTA-text-wrapper">
             <h1 className="New-User-CTA-title">Monero (XMR) Block Explorer</h1>
@@ -128,6 +107,29 @@ export class Home extends React.Component {
         </section>
         <MemPool />
         <Blocks />
+        <MetaTags>
+          <title>Monero (XMR) Blockchain Explorer - XMRScan</title>
+          <meta
+            name="description"
+            content="XMRScan allows you to check XMR blocks and transactions with Monero blockchain explorer"
+          />
+          <meta property="og:title" content="Monero (XMR) Explorer - XMRScan" />
+          <meta name="og:title" content="Monero (XMR) Explorer - XMRScan" />
+          <meta
+            name="og:description"
+            content="XMRScan allows you to check XMR blocks and transactions with Monero blockchain explorer"
+          />
+          <meta property="og:url" content="https://xmrscan.org/#/" />
+          <meta property="og:type" content="website" />
+          <meta
+            name="twitter:description"
+            content="XMRScan allows you to check XMR blocks and transactions with Monero blockchain explorer"
+          />
+          <meta name="twitter:title" content="Monero (XMR) Explorer - XMRScan" />
+          <meta name="application-name" content="XMRScan" />
+          <meta name="apple-mobile-web-app-title" content="XMRScan" />
+          <script type="application/ld+json">{structuredJSON}</script>
+        </MetaTags>
         <section className="promo">
           <h3>How long does a Monero transfer take?</h3>
           <p>

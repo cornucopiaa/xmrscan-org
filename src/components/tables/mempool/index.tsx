@@ -106,13 +106,15 @@ class MemPoolClass extends React.Component<Props, State> {
             name="og:description"
             content="Monero (XMR) Transaction Pool. Monero Block Frequency Tool - XMRScan"
           />
-          <meta property="og:url" content="https://xmrscan.org/txpool" />
+          <meta property="og:url" content="https://xmrscan.org/#/mempool" />
           <meta property="og:type" content="website" />
           <meta
             name="twitter:description"
             content="Monero (XMR) Transaction Pool. Monero Block Frequency Tool - XMRScan"
           />
           <meta name="twitter:title" content="Monero (XMR) Transaction Pool — XMRScan" />
+          <meta name="application-name" content="XMRScan" />
+          <meta name="apple-mobile-web-app-title" content="XMRScan" />
         </MetaTags>
         <div className="MemPool-header">
           <h1 className="MemPool-title">Monero Transaction Pool</h1>{' '}
