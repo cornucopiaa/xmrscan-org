@@ -9,7 +9,7 @@ export const DetailsSkeleton = ({ type }: Props) => (
   <>
     <div className="Details-header">
       <h1 className="Details-header-title">
-        {type === 'tx' ? 'Monero Transaction' : 'Monero (XMR) Block Explorer'}
+        {type === 'tx' ? 'Monero Transaction' : 'Monero (XMR) Block'}
       </h1>
       <div className="flex-spacer" />
       <div className="Details-header-timestamp skeleton">2018 / 04 / 19 – 08:04 UTC</div>

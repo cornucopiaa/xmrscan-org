@@ -88,9 +88,7 @@ export class BlockDetailsClass extends React.Component<Props, State> {
             </MetaTags>
             <div className="Details-header">
               <div className="Details-header-title-wrapper">
-                <h1 className="Details-header-title">
-                  Monero (XMR) Block Explorer {block.block_height}
-                </h1>
+                <h1 className="Details-header-title">Monero (XMR) Block {block.block_height}</h1>
               </div>
               <div className="flex-spacer" />
               <p className="Details-header-timestamp">
