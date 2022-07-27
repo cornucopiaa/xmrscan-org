@@ -2,8 +2,8 @@ import { createReducer } from 'utils/functions';
 import { TypeKeys } from './constants';
 import { Node, AddNodeAction, RemoveNodeAction, EditNodeAction, SelectNodeAction } from './actions';
 
-export const defaultNode = 'MyCryptoAPI';
-export const xmrScanNode = 'XMRScanAPI';
+export const defaultNode = 'MoneroExplorer API';
+export const xmrChainNode = 'XMRChain API';
 
 export interface NodeState {
   selectedNode: string;
@@ -13,8 +13,8 @@ export interface NodeState {
 export const INITIAL_STATE: NodeState = {
   selectedNode: defaultNode,
   nodes: [
-    { name: defaultNode, url: 'https://monero.mycryptoapi.com' },
-    { name: xmrScanNode, url: 'https://mainnet.xmrscan.org' }
+    { name: defaultNode, url: 'https://moneroexplorer.org' },
+    { name: xmrChainNode, url: 'https://xmrchain.net/' }
   ]
 };
 
