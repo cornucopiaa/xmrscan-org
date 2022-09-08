@@ -32,7 +32,7 @@ export const Footer = () => (
             className="Footer-social-media-link"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/nobd/monerovision"
+            href="https://github.com/nobd/xmrscan-org"
           >
             <i className="nc-icon nc-logo-github size_24px" />
           </a>
