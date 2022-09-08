@@ -14,7 +14,7 @@ export const INITIAL_STATE: NodeState = {
   selectedNode: defaultNode,
   nodes: [
     { name: defaultNode, url: 'https://moneroexplorer.org' },
-    { name: xmrChainNode, url: 'https://xmrchain.net/' }
+    { name: xmrChainNode, url: 'https://xmrchain.net' }
   ]
 };
 
