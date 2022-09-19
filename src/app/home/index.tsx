@@ -119,7 +119,7 @@ export class Home extends React.Component {
             name="og:description"
             content="XMRScan allows you to check XMR blocks and transactions with Monero blockchain explorer"
           />
-          <meta property="og:url" content="https://xmrscan.org/#/" />
+          <meta property="og:url" content="https://xmrscan.org/" />
           <meta property="og:type" content="website" />
           <meta
             name="twitter:description"
