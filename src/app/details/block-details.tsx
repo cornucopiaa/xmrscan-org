@@ -70,10 +70,7 @@ export class BlockDetailsClass extends React.Component<Props, State> {
                 name="og:description"
                 content={`Monero (XMR) block ${block.block_height}, hash: ${block.hash}`}
               />
-              <meta
-                property="og:url"
-                content={`https://xmrscan.org/#/block/${block.block_height}`}
-              />
+              <meta property="og:url" content={`https://xmrscan.org/block/${block.block_height}`} />
               <meta property="og:type" content="website" />
               <meta
                 name="twitter:description"

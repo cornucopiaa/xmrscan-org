@@ -147,7 +147,7 @@ class BlocksClass extends React.Component<Props, State> {
             name="og:description"
             content="Monero (XMR) Latest Blocks. Check Monero Blockchain Blocks - XMRScan"
           />
-          <meta property="og:url" content="https://xmrscan.org/#/blocks" />
+          <meta property="og:url" content="https://xmrscan.org/blocks" />
           <meta property="og:type" content="website" />
           <meta
             name="twitter:description"

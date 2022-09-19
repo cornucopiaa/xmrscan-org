@@ -9,7 +9,7 @@ import { TxDetails } from 'app/details/tx-details';
 import { BlockDetails } from 'app/details/block-details';
 import { MemPool } from 'components/tables/mempool';
 import { Blocks } from 'components/tables/blocks';
-import { createBrowserHistory, createHashHistory } from 'history';
+import { createBrowserHistory } from 'history';
 import { PageNotFound } from 'app/page-not-found';
 import { ConfigureNode } from 'components/modals/configure-node';
 import { AddNode } from 'components/modals/add-node';
@@ -25,7 +25,8 @@ const CaptureRouteNotFound = withRouter(({ children, location }: any) => {
   );
 });
 
-const h = process.env.NODE_ENV === 'production' ? createHashHistory() : createBrowserHistory();
+// const h = process.env.NODE_ENV === 'production' ? createHashHistory() : createBrowserHistory();
+const h = createBrowserHistory();
 
 h.listen(() => {
   window.scrollTo(0, 0);

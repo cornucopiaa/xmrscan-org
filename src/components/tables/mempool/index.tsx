@@ -106,7 +106,7 @@ class MemPoolClass extends React.Component<Props, State> {
             name="og:description"
             content="Monero (XMR) Transaction Pool. Monero Block Frequency Tool - XMRScan"
           />
-          <meta property="og:url" content="https://xmrscan.org/#/mempool" />
+          <meta property="og:url" content="https://xmrscan.org/mempool" />
           <meta property="og:type" content="website" />
           <meta
             name="twitter:description"
