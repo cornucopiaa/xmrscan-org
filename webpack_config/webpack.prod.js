@@ -9,7 +9,7 @@ const path = require('path');
 
 const config = merge(common, {
   output: {
-    publicPath: './'
+    publicPath: '/'
   },
   module: {
     rules: [
