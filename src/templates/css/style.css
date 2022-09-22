@@ -139,3 +139,162 @@ div#decoded-inputs{
 input#toggle-1[type=checkbox]:checked ~ div#decoded-inputs {
     display: block;
 }
+
+/* Custom styles */
+h1 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 25px;
+    word-break: break-all;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 223.5%;
+    text-transform: uppercase;
+    word-break: break-all;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.5);
+    word-break: break-all;
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    max-width: 639px;
+    /* display: flex; */
+    /* align-items: center; */
+    margin-left: auto;
+    margin-right: auto;
+    word-break: break-all;
+}
+
+h5 {
+    word-break: break-all;
+}
+
+.center {
+    margin-top: 20px;
+    overflow: auto;
+}
+
+.style-1 input[type="text"] {
+    background: #D9D9D9;
+    border-radius: 29px;
+    height: 29px;
+    padding: 0 20px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    size: auto;
+}
+
+input[type="submit"] {
+    background: #F26822;
+    border-radius: 29px;
+    min-width: 120px;
+    height: 30px;
+    padding: 0 10px;
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    outline: none;
+    border-width: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h3 a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+h3 a:hover {
+    text-decoration: none;
+    color: #F26822;
+    transition: 0.2s linear all;
+}
+
+table {
+    overflow: auto;
+}
+
+tr:first-child td {
+    background: #4D4D4D;
+    border-radius: 56px;
+}
+
+td {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+#pages {
+    background: #F26822;
+    border-radius: 29px;
+    max-width: 300px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+.tabs {
+    min-height: 240px;
+}
+
+@media (max-width: 800px) {
+    form {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .style-1 input[type="text"] {
+        width: 100%;
+    }
+
+    .tabs {
+        min-height: 340px;
+    }
+}
+
+@media (max-width: 400px) {
+    form {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .style-1 input[type="text"] {
+        width: 100%;
+    }
+
+    .tabs {
+        min-height: 380px;
+    }
+}
