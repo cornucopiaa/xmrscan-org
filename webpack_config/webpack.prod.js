@@ -44,6 +44,10 @@ const config = merge(common, {
       {
         from: path.join(__dirname, '../src/assets/imgs/og.png'),
         to: path.join(__dirname, '../dist')
+      },
+      {
+        from: path.join(__dirname, '../public/sitemap.xml'),
+        to: path.join(__dirname, '../dist')
       }
     ])
   ]
