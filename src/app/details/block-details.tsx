@@ -56,7 +56,8 @@ export class BlockDetailsClass extends React.Component<Props, State> {
         {!!block ? (
           <>
             <MetaTags>
-              <title>Monero Block {block.block_height} — XMRScan</title>
+              <link rel="canonical" href={`https://xmrscan.org/block/${block.block_height}`} />
+              <title>Monero (XMR) Block {block.block_height} — XMRScan Explorer</title>
               <meta
                 name="description"
                 content={`Monero (XMR) block ${block.block_height}, hash: ${block.hash}`}
@@ -85,7 +86,7 @@ export class BlockDetailsClass extends React.Component<Props, State> {
             </MetaTags>
             <div className="Details-header">
               <div className="Details-header-title-wrapper">
-                <h1 className="Details-header-title">Monero (XMR) Block {block.block_height}</h1>
+                <h1 className="Details-header-title">Monero Block {block.block_height}</h1>
               </div>
               <div className="flex-spacer" />
               <p className="Details-header-timestamp">
