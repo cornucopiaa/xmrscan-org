@@ -14,6 +14,11 @@
   z-index: 1;
   &-Drawer {
     @include RTG-side-drawer;
+
+    @media screen and (max-width: 600px) {
+      order: 1
+    }
+
     &-wrapper {
       position: fixed;
       top: 0;
@@ -75,6 +80,12 @@
     max-width: 1280px;
     width: 100%;
     margin: auto;
+    gap: 10px;
+
+    @media screen and (max-width: 600px) {
+      flex-wrap: wrap;
+      order: 3
+    }
   }
   &-title {
     display: flex;

@@ -22,7 +22,7 @@
   }
   &-text {
     font-size: 1rem;
-    color: $blue-gray-light;
+    color: $text-color;
     margin-bottom: 1rem;
     line-height: 1.75;
   }
@@ -65,7 +65,8 @@
 .promo {
   height: 400px;
   overflow-y: scroll;
-  
+  color: $text-color;
+
   p {
     margin: 10px 0;
   }

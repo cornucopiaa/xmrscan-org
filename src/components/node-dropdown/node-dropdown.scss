@@ -3,8 +3,32 @@
 
 .Select-node {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @media screen and (max-width: 600px) {
+    flex-grow: 1;
+  }
+
+  &--logo-link {
+    height: 32px;
+  }
+
+  &--logo-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    @media screen and (max-width: 600px) {
+      order: 2;
+      justify-content: flex-end;
+      flex-grow: 1;
+    }
+  }
+
   &-button {
-    @include button(lighten($Navigation-bg, 4%));
+    @include button($btn-tertiary);
     color: white;
   }
   &-wrapper {
@@ -43,6 +67,9 @@
     padding: 0.5rem 1.5rem;
     height: 3rem;
     transition: background-color $transition;
+    color: $text-color;
+    background-color: $text-color-light;
+
     button.settings {
       @include icon-button($text-color);
       margin-left: -0.5rem;
@@ -72,6 +99,7 @@
     }
     &.selected {
       background-color: $hover-color;
+      color: $text-color-light;
       > .selected-marker {
         background-color: $secondary-color;
       }
@@ -80,10 +108,10 @@
       }
     }
     &:hover {
-      background-color: $hover-color;
-      &:not(.selected) button.settings {
-        opacity: 0.3;
-      }
+      //background-color: $hover-color;
+      //&:not(.selected) button.settings {
+      //  opacity: 0.3;
+      //}
     }
   }
   &-add {

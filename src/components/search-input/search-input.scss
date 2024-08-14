@@ -3,9 +3,9 @@
 
 .Search {
   @include input-reset;
-  background-color: lighten($Navigation-bg, 4%);
+  background-color: $control-background;
   border-radius: $border-radius;
-  color: white;
+  color: $control-color;
   font-size: 1rem;
   font-weight: 500;
   margin: 0 1rem;
@@ -15,13 +15,15 @@
   width: 100%;
   @media screen and (max-width: 800px) {
     margin: 0;
+    order: 3;
   }
-  &::placeholder {
-    color: white;
-    text-align: center;
-    opacity: 1;
-  }
+  //&::placeholder {
+  //  color: white;
+  //  text-align: center;
+  //  opacity: 1;
+  //}
   &:focus {
     box-shadow: $box-shadow;
+    background-color: $control-focus;
   }
 }

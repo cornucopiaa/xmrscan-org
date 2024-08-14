@@ -2,11 +2,12 @@
 @import 'src/sass/mixins/index';
 
 .xmr-price {
-  border: 1px solid $border-color;
+  border: 1px solid $app-background;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  background-color: $app-background;
   &-header {
     padding: 1rem 1.5rem;
     display: flex;
@@ -21,7 +22,7 @@
       font-size: 1rem;
       font-weight: 500;
       border-radius: 6px;
-      background-color: $line-chart-accent;
+      background-color: $primary-background;
       color: white;
       padding: 0.25rem 0.5rem;
       line-height: 1;

@@ -5,6 +5,9 @@ import { Select } from './components/select-node';
 import { connect } from 'react-redux';
 import { openModal, OpenModalType } from 'redux/modals/actions';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { LogoBitcoin } from '../../app/nav/logo-bitcoin';
+import { LogoMempool } from '../../app/nav/logo-mempool';
+import { LogoEth } from '../../app/nav/logo-eth';
 
 interface DispatchProps {
   openModal: OpenModalType;
@@ -40,6 +43,17 @@ class NodeDropdownClass extends React.Component<Props, State> {
 
     return (
       <div className="Select-node">
+        <div className="Select-node--logo-wrapper">
+          <a className="Select-node--logo-link" href="https://btcmempool.org/">
+            <LogoMempool />
+          </a>
+          <a className="Select-node--logo-link" href="https://btcscan.org/">
+            <LogoBitcoin />
+          </a>
+          <a className="Select-node--logo-link" href="https://ethscan.org/">
+            <LogoEth />
+          </a>
+        </div>
         <button className="Select-node-button" onClick={toggleDropdown} ref={this.openButton}>
           Nodes <i className="nc-icon nc-small-triangle-down size_16px" />
         </button>
