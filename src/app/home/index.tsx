@@ -129,6 +129,7 @@ export class Home extends React.Component {
           <meta name="application-name" content="XMRScan" />
           <meta name="apple-mobile-web-app-title" content="XMRScan" />
           <script type="application/ld+json">{structuredJSON}</script>
+          <link rel="canonical" href="https://xmrscan.org/" />
         </MetaTags>
         <section className="promo">
           <h3>How long does a Monero transfer take?</h3>

@@ -156,9 +156,10 @@ class BlocksClass extends React.Component<Props, State> {
           <meta name="twitter:title" content="Monero (XMR) Blocks - XMRScan" />
           <meta name="application-name" content="XMRScan" />
           <meta name="apple-mobile-web-app-title" content="XMRScan" />
+          <link rel="canonical" href="https://xmrscan.org/blocks" />
         </MetaTags>
         <div className="Blocks-header">
-          <h1 className="Blocks-title">Monero Blocks</h1>
+          <h2 className="Blocks-title">Monero Blocks</h2>
           <div className="flex-spacer" />
           {!!paginated && (
             <>

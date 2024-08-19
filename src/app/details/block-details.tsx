@@ -83,6 +83,7 @@ export class BlockDetailsClass extends React.Component<Props, State> {
               />
               <meta name="application-name" content="XMRScan" />
               <meta name="apple-mobile-web-app-title" content="XMRScan" />
+              <link rel="canonical" href={`https://xmrscan.org/block/${block.block_height}`} />
             </MetaTags>
             <div className="Details-header">
               <div className="Details-header-title-wrapper">

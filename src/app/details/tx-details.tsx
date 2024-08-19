@@ -151,6 +151,11 @@ export class TxDetailsClass extends React.Component<Props, State> {
               />
               <meta name="application-name" content="XMRScan" />
               <meta name="apple-mobile-web-app-title" content="XMRScan" />
+              <link
+                rel="canonical"
+                href={`https://xmrscan.org/tx/${transaction.tx_hash ||
+                  this.props.match.params.transaction}`}
+              />
             </MetaTags>
             {!transaction.tx_hash && (
               <h1 className="Details-header-title">
