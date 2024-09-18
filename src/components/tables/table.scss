@@ -35,7 +35,7 @@ $table-cell-padding: 3rem;
     margin-right: 0.5rem;
   }
   &-view-all {
-    @include button($btn-background);
+    @include button($btn-tertiary);
     @include button-primary;
     margin-left: 1rem;
     line-height: 1.15;
@@ -89,7 +89,7 @@ $table-cell-padding: 3rem;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      background-color: #fafafa;
+      background-color: $primary-background;
       margin: -1rem -2rem;
       margin-top: 0;
       padding: 0.5rem 2rem;

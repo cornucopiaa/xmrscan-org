@@ -35,6 +35,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    background: #1E2B52;
   }
   &-dropdown {
     position: absolute;
@@ -42,7 +43,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    border: 1px solid $border-color;
+    border: 1px solid #1E2B52;
     min-width: 225px;
     right: 0;
     border-radius: $border-radius;
@@ -68,7 +69,7 @@
     height: 3rem;
     transition: background-color $transition;
     color: $text-color;
-    background-color: $text-color-light;
+    background-color: transparent;
 
     button.settings {
       @include icon-button($text-color);
@@ -98,10 +99,10 @@
       background-color: transparent;
     }
     &.selected {
-      background-color: $hover-color;
-      color: $text-color-light;
+      background-color: #105fb0;
+      color: $white;
       > .selected-marker {
-        background-color: $secondary-color;
+        background-color: #105fb0;
       }
       button.settings {
         opacity: 0.6;
@@ -115,7 +116,7 @@
     }
   }
   &-add {
-    @include button($secondary-color);
+    @include button($btn-tertiary);
     margin: 1rem;
     margin-top: 0;
   }

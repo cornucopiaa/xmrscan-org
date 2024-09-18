@@ -1,6 +1,32 @@
 @import 'src/sass/mixins/index';
 @import 'src/sass/variables/index';
 
+.Submit-search-wrapper {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.Submit-search-btn {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 3px;
+  white-space: nowrap;
+  color: white;
+  background-color: $btn-tertiary;
+  transition: background-color 200ms ease;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #2cb3f8;
+  }
+}
+
 .Navigation {
   background-color: $Navigation-bg;
   width: 100%;
