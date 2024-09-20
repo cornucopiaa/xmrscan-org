@@ -5,7 +5,7 @@
   @include input-reset;
   background-color: $control-background;
   border-radius: $border-radius;
-  color: $control-color;
+  color: $text-color-light;
   font-size: 1rem;
   font-weight: 500;
   margin: 0 1rem;
@@ -13,6 +13,11 @@
   padding: 0.75rem 1rem;
   transition: box-shadow $transition;
   width: 100%;
+
+  &:focus {
+    color: $control-color;
+  }
+
   @media screen and (max-width: 800px) {
     margin: 0;
     order: 3;

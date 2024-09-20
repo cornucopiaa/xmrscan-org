@@ -28,7 +28,7 @@
   &-input {
     font-size: 1rem;
     font-weight: 400;
-    color: $text-color;
+    color: $text-color-light;
     padding: 1rem 1.5rem;
     border-radius: $border-radius;
     border: 1px solid $border-dark-color;
@@ -41,7 +41,9 @@
     }
     &:focus {
       border-color: $secondary-color;
-      box-shadow: inset 0 0 0 1px $secondary-color;
+      color: $white;
+      background-color: $control-focus;
+      box-shadow: 0 0 0 0.2rem #105fb040;
     }
     &::placeholder {
       color: $blue-gray-light;

@@ -118,7 +118,12 @@ class MemPoolClass extends React.Component<Props, State> {
           <link rel="canonical" href="https://xmrscan.org/mempool" />
         </MetaTags>
         <div className="MemPool-header">
-          <h2 className="MemPool-title">Monero Transaction Pool</h2>{' '}
+          {window.location.pathname === '/' && (
+            <h2 className="MemPool-title">Monero Transaction Pool</h2>
+          )}
+          {window.location.pathname !== '/' && (
+            <h1 className="MemPool-title">Monero Transaction Pool</h1>
+          )}
           {!paginated &&
             txs.length >= 5 && (
               <span className="MemPool-size">

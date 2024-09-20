@@ -159,7 +159,8 @@ class BlocksClass extends React.Component<Props, State> {
           <link rel="canonical" href="https://xmrscan.org/blocks" />
         </MetaTags>
         <div className="Blocks-header">
-          <h2 className="Blocks-title">Monero Blocks</h2>
+          {window.location.pathname === '/' && <h2 className="Blocks-title">Monero Blocks</h2>}
+          {window.location.pathname !== '/' && <h1 className="Blocks-title">Monero Blocks</h1>}
           <div className="flex-spacer" />
           {!!paginated && (
             <>
