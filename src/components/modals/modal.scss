@@ -12,7 +12,7 @@
   border: 1px solid $border-color;
   border-radius: $border-radius;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 9px;
-  background-color: #fff;
+  background-color: $app-background;
   min-width: 240px;
   max-width: 80%;
   @media screen and (max-width: 900px) {
@@ -41,7 +41,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $app-background;
     padding: 0.5rem 1.5rem !important;
     .nc-icon {
       @include icon-button($text-color);
@@ -89,10 +89,14 @@
     &.primary {
       @include button($secondary-color);
       @include button-primary;
+
+      background-color: $btn-tertiary;
     }
     &.secondary {
       @include button(#fff);
       @include button-secondary;
+
+      background-color: transparent;
     }
     &.warning {
       @include button(#e06b56);

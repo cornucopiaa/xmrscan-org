@@ -19,7 +19,7 @@ body {
     Cantarell, 'Helvetica Neue', sans-serif;
   height: 100%;
   width: 100%;
-  background-color: #fdfdfd;
+  background-color: $app-background;
   @media screen and (max-width: 600px) {
     font-size: 13px;
   }
@@ -67,9 +67,9 @@ span {
 }
 
 .card {
-  border: 1px solid $border-color;
+  border: 1px solid $primary-background;
   border-radius: $border-radius;
-  background-color: white;
+  background-color: $primary-background;
   box-shadow: $box-shadow;
   width: 100%;
   padding: 1rem 2rem;
@@ -100,6 +100,10 @@ span {
 
 .flex-spacer {
   flex-grow: 1;
+
+  @media screen and (max-width: 600px) {
+    order: 4
+  }
 }
 
 @keyframes skeleton-pulse {

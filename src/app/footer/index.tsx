@@ -6,7 +6,7 @@ export const Footer = () => (
   <footer className="Footer">
     <div className="Footer-inner">
       <div className="Footer-main-content">
-        <a className="Footer-logo" href="https://monerovision.com/">
+        <a className="Footer-logo" href="https://xmrscan.org/">
           <Logo />
         </a>
       </div>
