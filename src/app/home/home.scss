@@ -17,9 +17,13 @@
     font-size: 2rem;
     font-weight: 400;
     color: $text-color;
-    white-space: nowrap;
     margin-bottom: 0.5rem;
+
+    &-md {
+      font-size: 1.5rem;
+    }
   }
+
   &-text {
     font-size: 1rem;
     color: $text-color;
@@ -63,8 +67,8 @@
 }
 
 .promo {
-  height: 400px;
-  overflow-y: scroll;
+  max-height: 400px;
+  overflow-y: auto;
   color: $text-color;
 
   p {

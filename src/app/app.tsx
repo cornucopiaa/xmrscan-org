@@ -5,6 +5,7 @@ import './app.scss';
 import { Nav } from 'app/nav';
 import { Footer } from 'app/footer';
 import { Home } from 'app/home';
+import { MoneroWalletComparison } from 'app/monero-wallet-comparison';
 import { TxDetails } from 'app/details/tx-details';
 import { BlockDetails } from 'app/details/block-details';
 import { MemPool } from 'components/tables/mempool';
@@ -14,6 +15,11 @@ import { PageNotFound } from 'app/page-not-found';
 import { ConfigureNode } from 'components/modals/configure-node';
 import { AddNode } from 'components/modals/add-node';
 import { Notifications } from 'components/notifications';
+import { MoneroTechnicalGuides } from './monero-technical-guides';
+import { MoneroInfoHub } from './monero-info-hub';
+import { MiningMoneroHub } from './mining-monero-hub';
+import { ExchangeMoneroOptions } from './exchange-monero-options';
+import { BuyMoneroGuide } from './buy-monero-guide';
 
 export const RouteNotFound = () => <Redirect to={{ state: { error: true } }} />;
 
@@ -44,6 +50,24 @@ const App = () => (
           <Switch>
             {/* These routes are 'exact' because they have no subroutes, except for path='/' */}
             <Route exact={true} path="/" component={Home} />
+            <Route
+              exact={true}
+              path="/insights/monero-wallet-comparison"
+              component={MoneroWalletComparison}
+            />
+            <Route
+              exact={true}
+              path="/insights/monero-technical-guides"
+              component={MoneroTechnicalGuides}
+            />
+            <Route exact={true} path="/insights/monero-info-hub" component={MoneroInfoHub} />
+            <Route exact={true} path="/insights/mining-monero-hub" component={MiningMoneroHub} />
+            <Route
+              exact={true}
+              path="/insights/exchange-monero-options"
+              component={ExchangeMoneroOptions}
+            />
+            <Route exact={true} path="/insights/buy-monero-guide" component={BuyMoneroGuide} />
             <Route
               exact={true}
               path="/mempool"
