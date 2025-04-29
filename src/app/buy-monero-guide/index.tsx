@@ -104,6 +104,40 @@ export class BuyMoneroGuide extends React.Component {
               involves account creation, deposit, and completing the purchase using your preferred
               payment method.
             </p>
+            <p className="New-User-CTA-text">
+              Purchasing Monero (XMR) involves the following steps:
+            </p>
+            <ul>
+              <li>
+                <p className="New-User-CTA-text">
+                  1. Select an exchange that supports XMR purchases, such as Kraken or KuCoin.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  2. Register and complete any required identity verification processes.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  3. Deposit Funds. Add fiat currency or other cryptocurrencies to your account.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  4. Navigate to the trading section, select XMR, and execute your buy order.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  5. Optional: for enhanced security, transfer your XMR to a personal wallet, such
+                  as a hardware wallet or a trusted software wallet.
+                </p>
+              </li>
+            </ul>
+            <p className="New-User-CTA-text">
+              Always ensure you're using secure and reputable platforms to protect your assets.
+            </p>
           </div>
           <MoneroGraph width={width} height={height} />
         </section>
@@ -111,9 +145,9 @@ export class BuyMoneroGuide extends React.Component {
           <div className="New-User-CTA-text-wrapper">
             <h2 className="New-User-CTA-title New-User-CTA-title-md">Where to Buy Monero</h2>
             <p className="New-User-CTA-text">
-              Major exchanges like Binance, Kraken, and Huobi offer XMR trading pairs. P2P platforms
-              like LocalMonero are ideal for users seeking enhanced privacy. It is important to
-              choose platforms with robust security measures and a good reputation.
+              Major exchanges like KuCoin, Kraken, HTX offer XMR trading pairs. P2P platforms like
+              Bisq are ideal for users seeking enhanced privacy. It is important to choose platforms
+              with robust security measures and a good reputation.
             </p>
           </div>
         </section>

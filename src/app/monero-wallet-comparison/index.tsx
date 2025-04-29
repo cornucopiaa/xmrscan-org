@@ -116,8 +116,32 @@ export class MoneroWalletComparison extends React.Component {
             <p className="New-User-CTA-text">
               Hardware wallets are physical devices designed to store your Monero offline. These
               wallets offer the highest level of security by keeping your private keys away from
-              internet exposure. Popular options include Ledger Nano X and Trezor Model T. Learn how
-              to set up and use these wallets for maximum safety.
+              internet exposure. Leading hardware options include:
+            </p>
+            <ul>
+              <li>
+                <p className="New-User-CTA-text">• Ledger Nano X</p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">• Ledger Nano S Plus</p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">• Trezor Model T</p>
+              </li>
+            </ul>
+            <p className="New-User-CTA-text">
+              Storing Monero (XMR) securely with a hardware wallet requires more than just device
+              compatibility—it also demands proper support for Monero’s unique privacy features,
+              such as ring signatures and stealth addresses. These cryptographic elements are not
+              fully supported by most hardware wallet apps, which is why managing your XMR requires
+              integration with dedicated software like the Monero GUI Wallet or Feather Wallet.
+            </p>
+            <p className="New-User-CTA-text">
+              To use Ledger or Trezor with Monero, first install the Monero app on your Ledger via
+              Ledger Live, or ensure your Trezor firmware is up to date. Then, open the Monero GUI
+              Wallet or Feather Wallet and choose “Use a hardware wallet” during setup. Connect your
+              device via USB and follow the prompts to sync with a local or remote Monero node. Once
+              synced, you can securely receive and send XMR.
             </p>
           </div>
         </section>
@@ -129,9 +153,25 @@ export class MoneroWalletComparison extends React.Component {
             </h2>
             <p className="New-User-CTA-text">
               Mobile wallets offer convenience and accessibility, allowing you to manage your Monero
-              from your smartphone. Top choices include Monerujo for Android and Cake Wallet for
-              iOS. These apps are user-friendly, feature-rich, and secure. Get tips on mobile wallet
-              setup and usage.
+              from your smartphone. Top choices include:
+            </p>
+            <ul>
+              <li>
+                <p className="New-User-CTA-text">
+                  • Monerujo (Android), offering full support for Monero’s privacy features and the
+                  ability to manage multiple wallets.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  • Cake Wallet (iOS and Android), known for its intuitive interface, built-in
+                  exchange support, and open-source codebase.
+                </p>
+              </li>
+            </ul>
+            <p className="New-User-CTA-text">
+              Both wallets connect to remote nodes, keeping sync times fast while preserving user
+              privacy.
             </p>
           </div>
         </section>
@@ -144,8 +184,13 @@ export class MoneroWalletComparison extends React.Component {
             <p className="New-User-CTA-text">
               Desktop wallets are ideal for users who manage Monero frequently from their PC. Monero
               GUI and Feather Wallet are excellent choices. They provide enhanced security features
-              and support for advanced transactions. Learn how to safely download and install these
-              wallets.
+              and support for advanced transactions.
+            </p>
+            <p className="New-User-CTA-text">
+              The Monero GUI Wallet is the official, full-featured desktop wallet, offering advanced
+              tools and the option to run a full node for maximum privacy and control. For a faster,
+              lightweight alternative, Feather Wallet provides a streamlined experience with support
+              for remote nodes, hardware wallets, and multisig functionality.
             </p>
           </div>
         </section>

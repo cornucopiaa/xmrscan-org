@@ -99,10 +99,12 @@ export class MiningMoneroHub extends React.Component {
           <div className="New-User-CTA-text-wrapper">
             <h1 className="New-User-CTA-title">How to Mine Monero (XMR)</h1>
             <p className="New-User-CTA-text">
-              Monero mining involves using computational power to validate transactions and secure
-              the blockchain. It uses a Proof-of-Work (PoW) algorithm called RandomX, optimized for
-              CPUs. Miners earn XMR as rewards for solving cryptographic puzzles, contributing to
-              network decentralization and security.
+              Monero (XMR) utilizes the RandomX proof-of-work algorithm, optimized for CPU mining
+              and resistant to ASICs, promoting decentralization. To begin mining Monero, you'll
+              need a Monero-compatible wallet to receive payouts, mining software like XMRig, and
+              suitable hardware. You can choose between solo mining, joining a mining pool for more
+              consistent rewards, or using decentralized options like P2Pool, which combines the
+              benefits of both approaches without centralized control.
             </p>
           </div>
           <MoneroGraph width={width} height={height} />
@@ -114,10 +116,21 @@ export class MiningMoneroHub extends React.Component {
             </h2>
             <p className="New-User-CTA-text">
               When choosing mining hardware, CPUs generally outperform GPUs for Monero mining due to
-              the RandomX algorithm. High-performance models such as AMD Ryzen 9 and Intel i9 series
-              are popular among miners. Setting up an efficient mining rig with adequate cooling and
-              power management is crucial for long-term profitability.
+              the RandomX algorithm. Top-performing CPUs include:
             </p>
+            <ul>
+              <li>
+                <p className="New-User-CTA-text">
+                  • AMD EPYC 9654: 96 cores, ~148 kH/s hashrate, suitable for large-scale
+                  operations.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  • AMD EPYC 9B14: 96 cores, ~177 kH/s, balances performance and cost.
+                </p>
+              </li>
+            </ul>
           </div>
         </section>
         <MemPool />
@@ -127,10 +140,32 @@ export class MiningMoneroHub extends React.Component {
               Recommended Mining Software
             </h2>
             <p className="New-User-CTA-text">
-              Software options like XMRig and Monero GUI miner are widely used. These applications
-              allow you to configure mining settings, connect to pools, and monitor hash rates.
               Choosing the right software depends on your hardware and level of technical expertise.
+              To mine Monero (XMR) effectively, specialized mining software is essential. It allows
+              you to configure mining settings, connect to pools, and monitor hash rates. Without
+              such software, your hardware would be underutilized, and mining would be inefficient.
             </p>
+            <p className="New-User-CTA-text">
+              Effective mining software options for Monero include:
+            </p>
+            <ul>
+              <li>
+                <p className="New-User-CTA-text">
+                  • XMRig: open-source, high-performance miner compatible with various operating
+                  systems.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  • SRBMiner-MULTI: user-friendly interface, supports multiple algorithms.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  • XMR-Stak: versatile miner supporting both CPU and GPU mining.
+                </p>
+              </li>
+            </ul>
           </div>
         </section>
         <Blocks />
@@ -142,25 +177,51 @@ export class MiningMoneroHub extends React.Component {
               connecting to a mining pool. Proper ventilation and stable power sources are essential
               to prevent overheating and downtime.
             </p>
+            <p className="New-User-CTA-text">
+              Here is a more detailed instruction how to set up a Monero mining rig:
+            </p>
+            <ul>
+              <li>
+                <p className="New-User-CTA-text">
+                  1. Assemble Hardware. Choose a CPU-centric setup with adequate cooling and power
+                  supply.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  2. Install Mining Software. Download and configure software like XMRig with your
+                  wallet address and preferred mining pool.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  3. Optimize Settings. Adjust settings for efficiency, monitor temperatures, and
+                  ensure stable operation.
+                </p>
+              </li>
+            </ul>
+            <p className="New-User-CTA-text">
+              For more detailed guidance, refer to the official Monero mining documentation.
+            </p>
           </div>
         </section>
         <MetaTags>
           <title>Monero Mining: How to Mine XMR | XMRscan</title>
           <meta
             name="description"
-            content="Discover how to mine Monero efficiently. Learn about hardware, software, pools, and tips to maximize profitability."
+            content="Discover how to mine Monero efficiently. Learn about the widely-used hardware, software, pools, and tips to maximize profitability."
           />
           <meta property="og:title" content="Monero Mining: How to Mine XMR | XMRscan" />
           <meta name="og:title" content="Monero Mining: How to Mine XMR | XMRscan" />
           <meta
             name="og:description"
-            content="Discover how to mine Monero efficiently. Learn about hardware, software, pools, and tips to maximize profitability."
+            content="Discover how to mine Monero efficiently. Learn about the widely-used hardware, software, pools, and tips to maximize profitability."
           />
           <meta property="og:url" content="https://xmrscan.org/" />
           <meta property="og:type" content="website" />
           <meta
             name="twitter:description"
-            content="Discover how to mine Monero efficiently. Learn about hardware, software, pools, and tips to maximize profitability."
+            content="Discover how to mine Monero efficiently. Learn about the widely-used hardware, software, pools, and tips to maximize profitability."
           />
           <meta name="twitter:title" content="Monero Mining: How to Mine XMR | XMRscan" />
           <meta name="application-name" content="XMRScan" />
@@ -173,8 +234,8 @@ export class MiningMoneroHub extends React.Component {
           <p>
             What hardware is best for mining Monero?<br />
             The most efficient hardware for Monero mining is typically high-performance CPUs like
-            AMD Ryzen 9 or Intel i9 series. GPUs are less efficient due to Monero's RandomX
-            algorithm, which is CPU-optimized.
+            AMD EPYC 9654, AMD EPYC 9B14 or Intel i9 series. GPUs are less efficient due to Monero's
+            RandomX algorithm, which is CPU-optimized.
           </p>
 
           <p>

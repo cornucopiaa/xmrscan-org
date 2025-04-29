@@ -99,9 +99,11 @@ export class MoneroInfoHub extends React.Component {
           <div className="New-User-CTA-text-wrapper">
             <h1 className="New-User-CTA-title">Everything You Need to Know About Monero</h1>
             <p className="New-User-CTA-text">
-              Monero is renowned for its privacy and security. This information hub provides
-              insights into Monero's features, technology, and community updates, helping you stay
-              informed and secure.
+              Monero (XMR) is a cryptocurrency that enables untraceable transactions. Unlike many
+              other blockchains, Monero masks sender and receiver addresses, as well as transaction
+              amounts, ensuring anonymity. It operates on a proof-of-work consensus mechanism and
+              emphasizes resistance to specialized mining hardware, allowing for more decentralized
+              mining.
             </p>
           </div>
           <MoneroGraph width={width} height={height} />
@@ -110,9 +112,30 @@ export class MoneroInfoHub extends React.Component {
           <div className="New-User-CTA-text-wrapper">
             <h2 className="New-User-CTA-title New-User-CTA-title-md">Monero's Privacy Features</h2>
             <p className="New-User-CTA-text">
-              Monero uses technologies like Ring Signatures and Stealth Addresses to ensure
-              transaction privacy. Learn how these features protect your financial data from prying
-              eyes.
+              Monero integrates several privacy-enhancing technologies:
+            </p>
+            <ul>
+              <li>
+                <p className="New-User-CTA-text">
+                  • Ring Signatures: obscure the sender's identity by mixing their transaction with
+                  a group of others, making it infeasible to determine the actual sender.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  • Stealth Addresses: generate one-time addresses for each transaction, preventing
+                  the linkage of transactions to the recipient's public address.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  • Ring Confidential Transactions (RingCT): conceal transaction amounts, ensuring
+                  that only the sender and receiver can determine the transferred value.
+                </p>
+              </li>
+            </ul>
+            <p className="New-User-CTA-text">
+              These features make all Monero transactions confidential by default.
             </p>
           </div>
         </section>
@@ -123,9 +146,29 @@ export class MoneroInfoHub extends React.Component {
               Technological Advancements in Monero
             </h2>
             <p className="New-User-CTA-text">
-              Monero continuously evolves to enhance privacy and efficiency. Discover the latest
-              protocol updates and how they improve transaction anonymity.
+              Monero continuously evolves to enhance its privacy and efficiency:
             </p>
+            <ul>
+              <li>
+                <p className="New-User-CTA-text">
+                  • RandomX Algorithm: introduced to resist ASIC mining, favoring CPU miners and
+                  promoting decentralization.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  • Bulletproofs: implemented to reduce transaction sizes and fees while maintaining
+                  privacy.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  • Ongoing Research: the Monero community actively researches and integrates
+                  advancements to bolster security and scalability, ensuring the network adapts to
+                  emerging challenges.
+                </p>
+              </li>
+            </ul>
           </div>
         </section>
         <Blocks />
@@ -135,16 +178,36 @@ export class MoneroInfoHub extends React.Component {
               Keeping Up with Monero News
             </h2>
             <p className="New-User-CTA-text">
-              Stay updated with Monero’s development progress and community news. Explore resources
-              to track protocol upgrades and important announcements.
+              Staying informed about Monero's developments is crucial for users and enthusiasts:
             </p>
+            <ul>
+              <li>
+                <p className="New-User-CTA-text">
+                  • Official Blog: provides updates on software releases, network upgrades, and
+                  community news.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  • Cryptocurrency News: platforms like Cointelegraph and Decrypt offer news
+                  articles and analyses on Monero's market performance and technological progress.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  • Community Forums: engaging with the Monero community on forums and social media
+                  channels can provide insights and real-time discussions on the recent
+                  developments.
+                </p>
+              </li>
+            </ul>
           </div>
         </section>
         <MetaTags>
           <title>Monero Information Hub: Privacy, Technology, and Updates | XMRscan</title>
           <meta
             name="description"
-            content="Stay informed about Monero's privacy features, technology advancements, and the latest updates in the XMR ecosystem."
+            content="Learn about Monero's technologies behind its privacy features and explore the sources of the latest XMR updates."
           />
           <meta
             property="og:title"
@@ -156,13 +219,13 @@ export class MoneroInfoHub extends React.Component {
           />
           <meta
             name="og:description"
-            content="Stay informed about Monero's privacy features, technology advancements, and the latest updates in the XMR ecosystem."
+            content="Learn about Monero's technologies behind its privacy features and explore the sources of the latest XMR updates."
           />
           <meta property="og:url" content="https://xmrscan.org/" />
           <meta property="og:type" content="website" />
           <meta
             name="twitter:description"
-            content="Stay informed about Monero's privacy features, technology advancements, and the latest updates in the XMR ecosystem."
+            content="Learn about Monero's technologies behind its privacy features and explore the sources of the latest XMR updates."
           />
           <meta
             name="twitter:title"

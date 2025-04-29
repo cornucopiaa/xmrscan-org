@@ -99,10 +99,11 @@ export class ExchangeMoneroOptions extends React.Component {
           <div className="New-User-CTA-text-wrapper">
             <h1 className="New-User-CTA-title">How to Exchange Monero (XMR)</h1>
             <p className="New-User-CTA-text">
-              Exchanging Monero involves trading it for other cryptocurrencies or fiat money. The
-              process requires choosing a reliable exchange, creating an account, and completing the
-              transaction securely. It is crucial to be aware of fees, privacy practices, and
-              withdrawal options before proceeding.
+              Exchanging Monero (XMR) involves selecting a platform and trading your coins for fiat
+              or another cryptocurrency. Some platforms require account registration. When choosing
+              a platform, consider factors like transaction fees, security measures, and whether the
+              exchange supports your desired trading pairs. In the next section, we will provide
+              examples of the exchange platforms.
             </p>
           </div>
           <MoneroGraph width={width} height={height} />
@@ -113,9 +114,10 @@ export class ExchangeMoneroOptions extends React.Component {
               Best Monero Exchange Platforms
             </h2>
             <p className="New-User-CTA-text">
-              Exchanges such as Binance, Kraken, and Huobi support XMR trading. Decentralized
-              platforms like TradeOgre are also popular among privacy-focused users. Comparing fees,
-              liquidity, and KYC requirements can help select the best option.
+              Large exchanges with high liquidity such as Kraken, KuCoin, and HTX support XMR
+              trading. If you are privacy-focused, there are decentralized platforms like TradeOgre,
+              Bisq, and Haveno. Additionally, non-custodial services like ChangeNOW and SimpleSwap
+              facilitate quick swaps without requiring account registration.
             </p>
           </div>
         </section>
@@ -128,7 +130,34 @@ export class ExchangeMoneroOptions extends React.Component {
             <p className="New-User-CTA-text">
               Converting XMR to BTC usually involves a crypto-to-crypto exchange. Users need to
               deposit XMR into their exchange wallet, select BTC as the conversion pair, and execute
-              the trade. Double-checking address accuracy is essential for secure transactions.
+              the trade.
+            </p>
+            <p className="New-User-CTA-text">
+              To convert Monero (XMR) to Bitcoin (BTC), follow these general steps:
+            </p>
+            <ul>
+              <li>
+                <p className="New-User-CTA-text">
+                  1. Choose an exchange that supports XMR to BTC conversions, such as Kraken,
+                  ChangeNOW, or SimpleSwap.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  2. Enter the amount of XMR you wish to convert and provide your BTC wallet
+                  address.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  3. Send your XMR to the provided address; once confirmed, the equivalent BTC will
+                  be transferred to your wallet.
+                </p>
+              </li>
+            </ul>
+            <p className="New-User-CTA-text">
+              Always double-check wallet addresses and transaction details to ensure accuracy and
+              security.
             </p>
           </div>
         </section>
@@ -137,29 +166,47 @@ export class ExchangeMoneroOptions extends React.Component {
           <div className="New-User-CTA-text-wrapper">
             <h2 className="New-User-CTA-title New-User-CTA-title-md">Selling Monero for Cash</h2>
             <p className="New-User-CTA-text">
-              Selling Monero can be done on exchanges that support fiat withdrawals. P2P platforms
-              like LocalMonero allow direct transactions between buyers and sellers, offering
-              enhanced privacy and flexible payment methods.
+              Selling Monero for cash can be accomplished through various methods:
             </p>
+            <ul>
+              <li>
+                <p className="New-User-CTA-text">
+                  • Centralized exchanges (e.g. Kraken) allow you to sell XMR for fiat currencies,
+                  which can then be withdrawn to your bank account.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  • Peer-to-Peer (P2P) marketplaces such as LocalMonero facilitate direct trades
+                  between users without intermediaries.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  • Decentralized exchanges (DEXs): platforms like Bisq offer anonymous trading
+                  options, allowing you to sell XMR for fiat or other cryptocurrencies.
+                </p>
+              </li>
+            </ul>
           </div>
         </section>
         <MetaTags>
           <title>Exchanging Monero: Best Platforms & Tips | XMRscan</title>
           <meta
             name="description"
-            content="Explore the top exchanges to trade Monero (XMR). Learn how to swap, convert, or sell Monero safely and efficiently."
+            content="Explore the top exchanges to trade Monero (XMR) and learn how to swap, convert, or sell Monero for cash or Bitcoin."
           />
           <meta property="og:title" content="Exchanging Monero: Best Platforms & Tips | XMRscan" />
           <meta name="og:title" content="Exchanging Monero: Best Platforms & Tips | XMRscan" />
           <meta
             name="og:description"
-            content="Explore the top exchanges to trade Monero (XMR). Learn how to swap, convert, or sell Monero safely and efficiently."
+            content="Explore the top exchanges to trade Monero (XMR) and learn how to swap, convert, or sell Monero for cash or Bitcoin."
           />
           <meta property="og:url" content="https://xmrscan.org/" />
           <meta property="og:type" content="website" />
           <meta
             name="twitter:description"
-            content="Explore the top exchanges to trade Monero (XMR). Learn how to swap, convert, or sell Monero safely and efficiently."
+            content="Explore the top exchanges to trade Monero (XMR) and learn how to swap, convert, or sell Monero for cash or Bitcoin."
           />
           <meta name="twitter:title" content="Exchanging Monero: Best Platforms & Tips | XMRscan" />
           <meta name="application-name" content="XMRScan" />

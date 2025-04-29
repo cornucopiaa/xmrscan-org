@@ -109,9 +109,15 @@ export class MoneroTechnicalGuides extends React.Component {
           <div className="New-User-CTA-text-wrapper">
             <h2 className="New-User-CTA-title New-User-CTA-title-md">Setting Up a Monero Node</h2>
             <p className="New-User-CTA-text">
-              Running your own Monero node enhances privacy and transaction validation. Learn the
-              steps to download, install, and configure a full node on your system, and understand
-              the benefits of decentralized validation.
+              Running your own Monero node allows you to verify transactions independently and
+              enhances your privacy by eliminating reliance on third-party nodes. It also supports
+              the decentralization and resilience of the Monero network.
+            </p>
+            <p className="New-User-CTA-text">
+              To set up a node, download the official Monero CLI or GUI Wallet, which includes the
+              daemon software monerod. You’ll need sufficient disk space (over 100 GB) and a stable
+              internet connection to sync the entire blockchain. Once running, your node can connect
+              locally to your wallet or be configured as a remote node for others.
             </p>
           </div>
         </section>
@@ -121,9 +127,28 @@ export class MoneroTechnicalGuides extends React.Component {
             <h2 className="New-User-CTA-title New-User-CTA-title-md">Accessing Remote Nodes</h2>
             <p className="New-User-CTA-text">
               Remote nodes allow users to connect to the Monero network without hosting a full node.
-              This guide explains how to find reliable remote nodes and securely connect your wallet
-              to them.
+              These nodes are ideal for lightweight wallets or limited storage environments. There
+              are two types of remote nodes:
             </p>
+            <ul>
+              <li>
+                <p className="New-User-CTA-text">
+                  • Private remote nodes: these are nodes you set up and control, often on a VPS or
+                  another external server. They offer enhanced privacy and security, as you manage
+                  who has access and how the node operates.
+                </p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">
+                  • Public remote nodes: operated by third parties, these nodes are openly
+                  accessible to anyone. Your wallet connects to a public or trusted third-party node
+                  to broadcast transactions and check balances. This setup is especially useful for
+                  mobile and desktop wallets like Feather, Monerujo, and Cake Wallet. While
+                  convenient, using public nodes can expose metadata such as your IP address and
+                  transaction timings to the node operator, potentially compromising privacy.
+                </p>
+              </li>
+            </ul>
           </div>
         </section>
         <Blocks />
@@ -131,9 +156,23 @@ export class MoneroTechnicalGuides extends React.Component {
           <div className="New-User-CTA-text-wrapper">
             <h2 className="New-User-CTA-title New-User-CTA-title-md">Integrating Monero API</h2>
             <p className="New-User-CTA-text">
-              The Monero API enables developers to integrate XMR payment processing into
-              applications. Get a step-by-step walkthrough on configuring the API and accessing
-              network data.
+              Monero provides two primary APIs for developers aiming to interact with its network:
+            </p>
+            <ul>
+              <li>
+                <p className="New-User-CTA-text">• Daemon RPC</p>
+              </li>
+              <li>
+                <p className="New-User-CTA-text">• Wallet RPC</p>
+              </li>
+            </ul>
+            <p className="New-User-CTA-text">
+              These interfaces facilitate various operations, from blockchain data retrieval to
+              wallet management. Detailed information on wallet RPC methods can be found in the
+              Monero documentation's RPC Library. When integrating Monero into applications, it's
+              common to use both RPC interfaces in tandem. The Daemon RPC provides access to
+              blockchain data, while the Wallet RPC handles private key management and transaction
+              creation.
             </p>
           </div>
         </section>
