@@ -218,9 +218,9 @@ export class ExchangeMoneroOptions extends React.Component {
           <h3>FAQs about Exchanging Monero</h3>
           <p>
             What are the best exchanges for trading Monero?<br />
-            Some of the most reliable exchanges for Monero include Binance, Kraken, and Huobi. For
-            users prioritizing privacy, decentralized platforms like TradeOgre and P2P options like
-            LocalMonero are recommended.
+            Some of the most reliable exchanges for Monero include Kraken, KuCoin, HTX. For users
+            prioritizing privacy, decentralized platforms like TradeOgre and P2P options like Bisq
+            are recommended.
           </p>
 
           <p>

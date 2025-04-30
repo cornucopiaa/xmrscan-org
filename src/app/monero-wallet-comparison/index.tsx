@@ -236,7 +236,7 @@ export class MoneroWalletComparison extends React.Component {
 
           <p>
             Can I use multiple Monero wallets simultaneously?<br />
-            Yes, you can manage Monero across different wallet types without issues.
+            Yes, you can manage Monero across different wallet types without any issues.
           </p>
         </section>
       </>

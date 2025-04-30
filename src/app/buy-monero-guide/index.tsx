@@ -105,6 +105,14 @@ export class BuyMoneroGuide extends React.Component {
               payment method.
             </p>
             <p className="New-User-CTA-text">
+              Always ensure you're using secure and reputable platforms to protect your assets.
+            </p>
+          </div>
+          <MoneroGraph width={width} height={height} />
+        </section>
+        <section className="card New-User-CTA">
+          <div className="New-User-CTA-text-wrapper">
+            <p className="New-User-CTA-text">
               Purchasing Monero (XMR) involves the following steps:
             </p>
             <ul>
@@ -135,11 +143,7 @@ export class BuyMoneroGuide extends React.Component {
                 </p>
               </li>
             </ul>
-            <p className="New-User-CTA-text">
-              Always ensure you're using secure and reputable platforms to protect your assets.
-            </p>
           </div>
-          <MoneroGraph width={width} height={height} />
         </section>
         <section className="card New-User-CTA">
           <div className="New-User-CTA-text-wrapper">
@@ -204,15 +208,14 @@ export class BuyMoneroGuide extends React.Component {
           <h3>FAQs about Buying Monero</h3>
           <p>
             Where can I buy Monero without KYC?<br />
-            Decentralized exchanges like Bisq or P2P platforms such as LocalMonero allow users to
-            buy Monero without identity verification. However, always exercise caution to avoid
-            scams.
+            Decentralized exchanges like Bisq allow users to buy Monero without identity
+            verification. However, always exercise caution to avoid scams.
           </p>
 
           <p>
             Can I use my credit card to purchase Monero?<br />
-            Yes, some centralized exchanges like Binance and Kraken allow credit card purchases. Be
-            mindful of transaction fees and verification requirements.
+            Yes, some centralized exchanges like Kraken allow credit card purchases. Be mindful of
+            transaction fees and verification requirements.
           </p>
 
           <p>
