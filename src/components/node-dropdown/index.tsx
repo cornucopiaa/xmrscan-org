@@ -8,6 +8,10 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { LogoBitcoin } from '../../app/nav/logo-bitcoin';
 import { LogoMempool } from '../../app/nav/logo-mempool';
 import { LogoEth } from '../../app/nav/logo-eth';
+import { LogoXmr } from '../../app/nav/logo-xmr';
+import { LogoMonero } from '../../app/nav/logo-monero';
+import { LogoBtcFee } from '../../app/nav/logo-btc-fee';
+import { LogoBtcFees } from '../../app/nav/logo-btc-fees';
 
 interface DispatchProps {
   openModal: OpenModalType;
@@ -44,14 +48,26 @@ class NodeDropdownClass extends React.Component<Props, State> {
     return (
       <div className="Select-node">
         <div className="Select-node--logo-wrapper">
-          <a className="Select-node--logo-link" href="https://btcmempool.org/">
-            <LogoMempool />
-          </a>
           <a className="Select-node--logo-link" href="https://btcscan.org/">
             <LogoBitcoin />
           </a>
           <a className="Select-node--logo-link" href="https://ethscan.org/">
             <LogoEth />
+          </a>
+          <a className="Select-node--logo-link" href="https://xmrscan.org/">
+            <LogoXmr />
+          </a>
+          <a className="Select-node--logo-link" href="https://moneroexplorer.org/">
+            <LogoMonero />
+          </a>
+          <a className="Select-node--logo-link" href="https://btcmempool.org/">
+            <LogoMempool />
+          </a>
+          <a className="Select-node--logo-link" href="https://btcfee.org/">
+            <LogoBtcFee />
+          </a>
+          <a className="Select-node--logo-link" href="https://btcfees.org/">
+            <LogoBtcFees />
           </a>
         </div>
         <button className="Select-node-button" onClick={toggleDropdown} ref={this.openButton}>

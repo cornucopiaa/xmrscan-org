@@ -312,7 +312,7 @@ export class TxDetailsClass extends React.Component<Props, State> {
                     {(transaction.tx_fee / 1000000000000).toFixed(3)} / kB.
                   </p>
                 </div>
-                {txs &&
+                {(txs &&
                   txs.length && (
                     <div className="Details-body-section">
                       <p className="Details-body-section-title">Recent Transactions</p>
@@ -343,7 +343,8 @@ export class TxDetailsClass extends React.Component<Props, State> {
                         </tbody>
                       </table>
                     </div>
-                  )}
+                  )) ||
+                  ''}
               </div>
             )}
           </>
