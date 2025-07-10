@@ -212,7 +212,7 @@ export class ExchangeMoneroOptions extends React.Component {
           <meta name="application-name" content="XMRScan" />
           <meta name="apple-mobile-web-app-title" content="XMRScan" />
           <script type="application/ld+json">{structuredJSON}</script>
-          <link rel="canonical" href="https://xmrscan.org/" />
+          <link rel="canonical" href="https://xmrscan.org/insights/exchange-monero-options" />
         </MetaTags>
         <section className="promo">
           <h3>FAQs about Exchanging Monero</h3>
