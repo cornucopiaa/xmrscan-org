@@ -195,7 +195,9 @@ class MemPoolClass extends React.Component<Props, State> {
                     <td>
                       <div className="truncate">
                         <div className="truncated">
-                          <Link to={`/tx/${transaction.tx_hash}`}>{transaction.tx_hash}</Link>
+                          <Link to={`/tx/${transaction.tx_hash}`} rel="nofollow">
+                            {transaction.tx_hash}
+                          </Link>
                         </div>
                       </div>
                     </td>
