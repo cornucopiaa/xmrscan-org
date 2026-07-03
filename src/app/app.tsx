@@ -34,8 +34,19 @@ const CaptureRouteNotFound = withRouter(({ children, location }: any) => {
 // const h = process.env.NODE_ENV === 'production' ? createHashHistory() : createBrowserHistory();
 const h = createBrowserHistory();
 
-h.listen(() => {
+h.listen(location => {
   window.scrollTo(0, 0);
+
+  // Report client-side (SPA) navigation to GA4. The initial page load is
+  // already counted by the gtag config snippet in index.html, and this
+  // listener only fires on subsequent history changes, so no double-counting.
+  if (window.gtag) {
+    window.gtag('event', 'page_view', {
+      page_path: location.pathname + location.search,
+      page_location: window.location.href,
+      page_title: document.title
+    });
+  }
 });
 
 const App = () => (
