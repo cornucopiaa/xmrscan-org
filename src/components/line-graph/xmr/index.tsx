@@ -43,8 +43,8 @@ export class MoneroGraph extends React.Component<Props, State> {
   };
 
   // CoinGecko returns prices as [timestampMs, priceUsd] tuples.
-  public formatRawData = (data: number[][]) => {
-    return data.map((point: number[], i: number) => {
+  public formatRawData = (data: number[][]): Point[] => {
+    return data.map((point: number[], i: number): Point => {
       return [i, point[1], Math.floor(point[0] / 1000)];
     });
   };
