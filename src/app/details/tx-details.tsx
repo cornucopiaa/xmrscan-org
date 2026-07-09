@@ -72,6 +72,7 @@ export class TxDetailsClass extends React.Component<Props, State> {
         this.fetchBlock();
       })
       .catch(error => {
+        this.setState({ data: { ...this.state.data, transaction: {}, pending: false } });
         console.log(error);
       });
   };
@@ -103,55 +104,74 @@ export class TxDetailsClass extends React.Component<Props, State> {
   public render() {
     const transaction = this.state.data.transaction as any;
     const txs = this.state.data.txs as any;
+    const isLoaded = !!transaction && !!transaction.tx_hash;
 
     return (
       <div className="Details card">
+        <MetaTags>
+          {isLoaded ? (
+            <title>
+              Monero (XMR) Transaction {transaction.tx_hash} — XMRScan Explorer
+            </title>
+          ) : (
+            <title>Transaction not found — XMRScan</title>
+          )}
+          <meta name="application-name" content="XMRScan" />
+          <meta name="apple-mobile-web-app-title" content="XMRScan" />
+          {isLoaded ? (
+            <meta
+              name="description"
+              content={`Monero (XMR) transaction ${transaction.tx_hash} - XMRScan`}
+            />
+          ) : (
+            <meta name="robots" content="noindex,nofollow" />
+          )}
+          {isLoaded && (
+            <meta
+              property="og:title"
+              content={`Monero (XMR) transaction ${transaction.tx_hash}`}
+            />
+          )}
+          {isLoaded && (
+            <meta
+              name="og:title"
+              content={`Monero Transaction ${transaction.tx_hash} | XMRScan`}
+            />
+          )}
+          {isLoaded && (
+            <meta
+              name="og:description"
+              content={`Monero (XMR) transaction ${transaction.tx_hash} - XMRScan`}
+            />
+          )}
+          {isLoaded && (
+            <meta
+              property="og:url"
+              content={`https://xmrscan.org/tx/${transaction.tx_hash}`}
+            />
+          )}
+          {isLoaded && <meta property="og:type" content="website" />}
+          {isLoaded && (
+            <meta
+              name="twitter:description"
+              content={`Monero (XMR) transaction ${transaction.tx_hash} - XMRScan`}
+            />
+          )}
+          {isLoaded && (
+            <meta
+              name="twitter:title"
+              content={`Monero Transaction ${transaction.tx_hash} | XMRScan`}
+            />
+          )}
+          {isLoaded && (
+            <link
+              rel="canonical"
+              href={`https://xmrscan.org/tx/${transaction.tx_hash}`}
+            />
+          )}
+        </MetaTags>
         {!!transaction ? (
           <>
-            <MetaTags>
-              <title>
-                Monero (XMR) Transaction{' '}
-                {transaction.tx_hash || this.props.match.params.transaction} — XMRScan Explorer
-              </title>
-              <meta
-                name="description"
-                content={`Monero (XMR) transaction ${transaction.tx_hash ||
-                  this.props.match.params.transaction} - XMRScan`}
-              />
-              <meta
-                property="og:title"
-                content={`Monero (XMR) transaction ${transaction.tx_hash ||
-                  this.props.match.params.transaction}`}
-              />
-              <meta
-                name="og:title"
-                content={`Monero Transaction ${transaction.tx_hash ||
-                  this.props.match.params.transaction} | XMRScan`}
-              />
-              <meta
-                name="og:description"
-                content={`Monero (XMR) transaction ${transaction.tx_hash ||
-                  this.props.match.params.transaction} - XMRScan`}
-              />
-              <meta
-                property="og:url"
-                content={`https://xmrscan.org/tx/${transaction.tx_hash ||
-                  this.props.match.params.transaction}`}
-              />
-              <meta property="og:type" content="website" />
-              <meta
-                name="twitter:description"
-                content={`Monero (XMR) transaction ${transaction.tx_hash ||
-                  this.props.match.params.transaction} - XMRScan`}
-              />
-              <meta
-                name="twitter:title"
-                content={`Monero Transaction ${transaction.tx_hash ||
-                  this.props.match.params.transaction} | XMRScan`}
-              />
-              <meta name="application-name" content="XMRScan" />
-              <meta name="apple-mobile-web-app-title" content="XMRScan" />
-            </MetaTags>
             {!transaction.tx_hash && (
               <h1 className="Details-header-title">
                 Can't find transaction data for tx hash {this.props.match.params.transaction}
@@ -307,7 +327,7 @@ export class TxDetailsClass extends React.Component<Props, State> {
                     {(transaction.tx_fee / 1000000000000).toFixed(3)} / kB.
                   </p>
                 </div>
-                {txs &&
+                {(txs &&
                   txs.length && (
                     <div className="Details-body-section">
                       <p className="Details-body-section-title">Recent Transactions</p>
@@ -338,7 +358,8 @@ export class TxDetailsClass extends React.Component<Props, State> {
                         </tbody>
                       </table>
                     </div>
-                  )}
+                  )) ||
+                  ''}
               </div>
             )}
           </>

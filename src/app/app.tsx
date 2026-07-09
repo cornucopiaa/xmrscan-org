@@ -5,6 +5,7 @@ import './app.scss';
 import { Nav } from 'app/nav';
 import { Footer } from 'app/footer';
 import { Home } from 'app/home';
+import { MoneroWalletComparison } from 'app/monero-wallet-comparison';
 import { TxDetails } from 'app/details/tx-details';
 import { BlockDetails } from 'app/details/block-details';
 import { MemPool } from 'components/tables/mempool';
@@ -14,6 +15,11 @@ import { PageNotFound } from 'app/page-not-found';
 import { ConfigureNode } from 'components/modals/configure-node';
 import { AddNode } from 'components/modals/add-node';
 import { Notifications } from 'components/notifications';
+import { MoneroTechnicalGuides } from './monero-technical-guides';
+import { MoneroInfoHub } from './monero-info-hub';
+import { MiningMoneroHub } from './mining-monero-hub';
+import { ExchangeMoneroOptions } from './exchange-monero-options';
+import { BuyMoneroGuide } from './buy-monero-guide';
 
 export const RouteNotFound = () => <Redirect to={{ state: { error: true } }} />;
 
@@ -28,8 +34,19 @@ const CaptureRouteNotFound = withRouter(({ children, location }: any) => {
 // const h = process.env.NODE_ENV === 'production' ? createHashHistory() : createBrowserHistory();
 const h = createBrowserHistory();
 
-h.listen(() => {
+h.listen(location => {
   window.scrollTo(0, 0);
+
+  // Report client-side (SPA) navigation to GA4. The initial page load is
+  // already counted by the gtag config snippet in index.html, and this
+  // listener only fires on subsequent history changes, so no double-counting.
+  if (window.gtag) {
+    window.gtag('event', 'page_view', {
+      page_path: location.pathname + location.search,
+      page_location: window.location.href,
+      page_title: document.title
+    });
+  }
 });
 
 const App = () => (
@@ -44,6 +61,24 @@ const App = () => (
           <Switch>
             {/* These routes are 'exact' because they have no subroutes, except for path='/' */}
             <Route exact={true} path="/" component={Home} />
+            <Route
+              exact={true}
+              path="/insights/monero-wallet-comparison"
+              component={MoneroWalletComparison}
+            />
+            <Route
+              exact={true}
+              path="/insights/monero-technical-guides"
+              component={MoneroTechnicalGuides}
+            />
+            <Route exact={true} path="/insights/monero-info-hub" component={MoneroInfoHub} />
+            <Route exact={true} path="/insights/mining-monero-hub" component={MiningMoneroHub} />
+            <Route
+              exact={true}
+              path="/insights/exchange-monero-options"
+              component={ExchangeMoneroOptions}
+            />
+            <Route exact={true} path="/insights/buy-monero-guide" component={BuyMoneroGuide} />
             <Route
               exact={true}
               path="/mempool"

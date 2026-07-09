@@ -25,11 +25,13 @@ export class MoneroGraph extends React.Component<Props, State> {
 
   public fetchData = () => {
     this.setState({ fetchingData: true });
-    fetchAsync('https://proxy.mycryptoapi.com/mv')
+    fetchAsync(
+      'https://api.coingecko.com/api/v3/coins/monero/market_chart?vs_currency=usd&days=7'
+    )
       .then((json: any) => {
-        if (json) {
+        if (json && Array.isArray(json.prices)) {
           this.setState({ fetchingData: false });
-          this.setState({ data: this.formatRawData(json.Data) });
+          this.setState({ data: this.formatRawData(json.prices) });
         } else {
           throw new Error('Failed to fetch XMR data');
         }
@@ -40,9 +42,10 @@ export class MoneroGraph extends React.Component<Props, State> {
       });
   };
 
-  public formatRawData = (data: any) => {
-    return data.map((point: { [key: string]: number }, i: number) => {
-      return [i, point.close, point.time];
+  // CoinGecko returns prices as [timestampMs, priceUsd] tuples.
+  public formatRawData = (data: number[][]): Point[] => {
+    return data.map((point: number[], i: number): Point => {
+      return [i, point[1], Math.floor(point[0] / 1000)];
     });
   };
 

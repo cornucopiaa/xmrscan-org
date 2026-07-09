@@ -6,7 +6,7 @@ export const Footer = () => (
   <footer className="Footer">
     <div className="Footer-inner">
       <div className="Footer-main-content">
-        <a className="Footer-logo" href="https://monerovision.com/">
+        <a className="Footer-logo" href="https://xmrscan.org/">
           <Logo />
         </a>
       </div>
@@ -44,6 +44,20 @@ export const Footer = () => (
           >
             <i className="nc-icon nc-logo-facebook size_24px" />
           </a>
+        </div>
+      </div>
+    </div>
+
+    <div className="Footer-inner">
+      <div>
+        <div>About XMRscan</div>
+        <div className="Footer-links-wrapper">
+          <a href="/insights/monero-wallet-comparison">Wallet Comparison</a>
+          <a href="/insights/monero-technical-guides">Technical Guides</a>
+          <a href="/insights/monero-info-hub">Info Hub</a>
+          <a href="/insights/mining-monero-hub">Mining Hub</a>
+          <a href="/insights/exchange-monero-options">Exchange Options</a>
+          <a href="/insights/buy-monero-guide">Buy Guide</a>
         </div>
       </div>
     </div>

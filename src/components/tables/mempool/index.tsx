@@ -115,9 +115,15 @@ class MemPoolClass extends React.Component<Props, State> {
           <meta name="twitter:title" content="Monero (XMR) Transaction Pool — XMRScan" />
           <meta name="application-name" content="XMRScan" />
           <meta name="apple-mobile-web-app-title" content="XMRScan" />
+          <link rel="canonical" href="https://xmrscan.org/mempool" />
         </MetaTags>
         <div className="MemPool-header">
-          <h1 className="MemPool-title">Monero Transaction Pool</h1>{' '}
+          {window.location.pathname === '/' && (
+            <h2 className="MemPool-title">Monero Transaction Pool</h2>
+          )}
+          {window.location.pathname !== '/' && (
+            <h1 className="MemPool-title">Monero Transaction Pool</h1>
+          )}
           {!paginated &&
             txs.length >= 5 && (
               <span className="MemPool-size">
@@ -189,7 +195,9 @@ class MemPoolClass extends React.Component<Props, State> {
                     <td>
                       <div className="truncate">
                         <div className="truncated">
-                          <Link to={`/tx/${transaction.tx_hash}`}>{transaction.tx_hash}</Link>
+                          <Link to={`/tx/${transaction.tx_hash}`} rel="nofollow">
+                            {transaction.tx_hash}
+                          </Link>
                         </div>
                       </div>
                     </td>

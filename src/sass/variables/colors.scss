@@ -10,8 +10,9 @@ $teal-light: #72bac4;
 $teal: #418f9b;
 $yellow-light: #f1dd84;
 $yellow: #fbc14e;
+$white: #fff;
 
-$text-color: $blue-gray;
+$text-color: $white;
 $text-color-light: $blue-gray-light;
 
 $primary-color: $yellow;
@@ -20,15 +21,25 @@ $secondary-color: $blue;
 $btn-background: $blue;
 
 $line-chart-color: $yellow;
-$line-chart-accent: #8493b0;
+$line-chart-accent: $blue-gray-light;
 
-$Navigation-bg: #4d4d4d;
+$Navigation-bg: #191E48;
 
 $error-color: $red;
 $warning-color: $yellow;
 $hover-color: #f6fbff;
 
-$footer-color: #4d4d4d;
+$footer-color: #191E48;
 
 $border-color: #f2f2f2;
 $border-dark-color: #e0e0e0;
+
+$control-background: #e0e8ff;
+$control-color: #fff;
+$control-focus: #1E2B52;
+
+$btn-tertiary: #1077d1;
+
+$app-background: #171C3B;
+
+$primary-background: #191E48;
